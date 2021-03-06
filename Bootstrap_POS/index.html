@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>POS System</title>
+
+    <link rel="stylesheet" href="asserts/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asserts/css/main.css">
+    <link rel="stylesheet" href="asserts/font/css/all.min.css">
+    <link rel="stylesheet" href="asserts/bootstrap/icon/bootstrap-icons.css">
+    <link rel="icon" href="asserts/bootstrap/icon/shop.svg">
+</head>
+<body>
+
+<!--header start-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="index.html"><i class="bi bi-shop"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-white active fw-bolder" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="order.html">Order</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="item.html">Items</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Others
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark bg-primary" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item text-white" href="customer.html">Customer</a></li>
+                        <li><a class="dropdown-item text-white" href="#">Employee</a></li>
+                        <li>
+                            <hr class="dropdown-divider bg-light">
+                        </li>
+                        <li><a class="dropdown-item text-white" href="#">Settings</a></li>
+                        <li><a class="dropdown-item text-white" href="#">About</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <button class="btn btn-outline-success bg-danger text-white" type="submit">Logout</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<!--header end-->
+
+<!--carousel start-->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner" style="height: 500px">
+        <div class="carousel-item active">
+            <img src="asserts/img/cover-img1.png" class="d-block w-100" alt="img1">
+        </div>
+        <div class="carousel-item">
+            <img src="asserts/img/cover-img2.jpg" class="d-block w-100" alt="img2">
+        </div>
+        <div class="carousel-item">
+            <img src="asserts/img/cover-img3.png" class="d-block w-100" alt="img3">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<!--carousel end-->
+
+
+<!--dashboard start-->
+<div class="container-fluid">
+    <!--path start-->
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">Home</li>
+        </ol>
+    </nav>
+    <!--path end-->
+    <p class="h1">Welcome to POS System</p>
+    <!--tiles start-->
+    <div class="jumbotron pt-md-5">
+        <div id="home-tiles">
+            <div class="row justify-content-around text-white">
+                <div class="col-lg-6 col-xl-3 mb-2">
+                    <div class="card">
+                        <div class="card-header bg-primary fw-bolder">Customers</div>
+                        <div class="card-body">
+                            <div class="dash-tile-icon"><i class="fas fa-users"></i></div>
+                            <div class="dash-tile-text text-right text-black-50"><h2>93</h2></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-3 mb-2">
+                    <div class="card">
+                        <div class="card-header bg-primary fw-bolder">Items</div>
+                        <div class="card-body">
+                            <div class="dash-tile-icon"><i class="fas fa-cubes"></i></div>
+                            <div class="dash-tile-text text-right text-black-50"><h2>101</h2></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-3 mb-2">
+                    <div class="card">
+                        <div class="card-header bg-primary fw-bolder">My Orders</div>
+                        <div class="card-body">
+                            <div class="dash-tile-icon"><i class="fas fa-shopping-cart"></i></div>
+                            <div class="dash-tile-text text-right text-black-50"><h2>999</h2></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-3 mb-2">
+                    <div class="card">
+                        <div class="card-header bg-primary fw-bolder">Settings</div>
+                        <div class="card-body">
+                            <div class="dash-tile-icon" style=""><i class="fas fa-cogs"></i></div>
+                            <div class="dash-tile-text text-right text-black-50">
+                                <h2>
+                                    <button class="btn btn-success">new</button>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--tiles end-->
+</div>
+<!--dashboard end-->
+
+<!--footer start-->
+<div class="footer-text btn-primary text-center">Developed by <a href="https://pasanabeysekara.com/" target="_blank"
+                                                                 style="text-decoration: none" class="text-white"><b>Pasan
+    Abeysekara</b></a> @ IJSE
+</div>
+<!--footer end-->
+
+<!--scripts start-->
+<script src="asserts/font/js/all.min.js"></script>
+<script src="asserts/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!--scripts end-->
+
+</body>
+</html>

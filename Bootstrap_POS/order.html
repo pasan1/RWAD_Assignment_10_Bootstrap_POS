@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order | POS System</title>
+
+    <link rel="stylesheet" href="asserts/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asserts/css/main.css">
+    <link rel="stylesheet" href="asserts/font/css/all.min.css">
+    <link rel="stylesheet" href="asserts/bootstrap/icon/bootstrap-icons.css">
+    <link rel="icon" href="asserts/bootstrap/icon/shop.svg">
+</head>
+<body>
+
+<!--header start-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="index.html"><i class="bi bi-shop"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white active fw-bolder" aria-current="page" href="#">Order</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="item.html">Items</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Others
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark bg-primary" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item text-white" href="customer.html">Customer</a></li>
+                        <li><a class="dropdown-item text-white" href="#">Employee</a></li>
+                        <li>
+                            <hr class="dropdown-divider bg-light">
+                        </li>
+                        <li><a class="dropdown-item text-white" href="#">Settings</a></li>
+                        <li><a class="dropdown-item text-white" href="#">About</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <button class="btn btn-outline-success bg-danger text-white" type="submit">Logout</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<!--header end-->
+
+<!--dashboard start-->
+<div class="container-fluid">
+    <!--path start-->
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Order</li>
+        </ol>
+    </nav>
+    <!--path end-->
+    <p class="h1 shadow-lg bg-body rounded">Order</p>
+    <!--forms start-->
+    <div class="container" style="padding: 0;">
+        <div class="row d-flex justify-content-evenly">
+            <div class="card" style="width: 15rem;">
+                <div class="card-header bg-primary text-white fw-bold">Detail</div>
+                <div class="card-body">
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-12">
+                            <label for="orderID" class="form-label">Order ID</label>
+                            <input type="text" class="form-control" id="orderID" value="O001" required disabled>
+                        </div>
+                        <div class="col-12">
+                            <label for="orderDate" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="orderDate" value="2020-03-01" required disabled>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="card" style="width: 30rem;">
+                <div class="card-header bg-primary text-white fw-bold">Customer</div>
+                <div class="card-body">
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-8">
+                            <label for="CustomerID" class="form-label">Customer ID</label>
+                            <select class="form-select" id="CustomerID">
+                                <option selected disabled value="">Select Customer ID</option>
+                                <option>C001</option>
+                                <option>C002</option>
+                                <option>C003</option>
+                                <option>C004</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <label for="NewCustomer" class="form-label"><i>For Add New</i></label>
+                            <button type="button" class="btn btn-outline-success form-control" id="NewCustomer">
+                                <i>New</i></button>
+                        </div>
+                        <div class="col-12">
+                            <label for="CustomerName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="CustomerName" disabled>
+                        </div>
+                        <div class="col-6">
+                            <label for="CustomerAddress" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="CustomerAddress" disabled>
+                        </div>
+                        <div class="col-6">
+                            <label for="CustomerTele" class="form-label">Telephone</label>
+                            <input type="text" class="form-control" id="CustomerTele" disabled>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="card" style="width: 35rem;">
+                <div class="card-header bg-primary text-white fw-bold">Item</div>
+                <div class="card-body">
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-4">
+                            <label for="ItemCode" class="form-label">Item Code</label>
+                            <select class="form-select" id="ItemCode">
+                                <option selected disabled value="">Select Code</option>
+                                <option>I001</option>
+                                <option>I002</option>
+                                <option>I003</option>
+                                <option>I004</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <label for="ItemName" class="form-label">Item Name</label>
+                            <input type="text" class="form-control" id="ItemName" disabled>
+                        </div>
+                        <div class="col-6">
+                            <label for="ItemQtyOnHand" class="form-label">Qty On Hand</label>
+                            <input type="text" class="form-control" id="ItemQtyOnHand" disabled>
+                        </div>
+                        <div class="col-6">
+                            <label for="ItemPrice" class="form-label">Price</label>
+                            <input type="text" class="form-control" id="ItemPrice" disabled>
+                        </div>
+                        <div class="col-12">
+                            <label for="OrderQty" class="form-label">Order Qty</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="OrderQty">
+                                <button class="btn btn-outline-success" type="button">Add</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-evenly">
+            <div class="card" style="width: 50rem; max-height: 260px; overflow-y: auto;">
+                <div class="card-body">
+                    <table class="table">
+                        <thead class="table-primary">
+                        <tr>
+                            <th>Item Code</th>
+                            <th>Item Name</th>
+                            <th>Unit Price</th>
+                            <th>Qty</th>
+                            <th>Total</th>
+                            <th>Options</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>I001</td>
+                            <td>Dhal</td>
+                            <td>125</td>
+                            <td>2</td>
+                            <td>250</td>
+                            <td>
+                                <button type="button" class="btn btn-outline-dark">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>I002</td>
+                            <td>Red Rice 5KG</td>
+                            <td>1350</td>
+                            <td>1</td>
+                            <td>1350</td>
+                            <td>
+                                <button type="button" class="btn btn-outline-dark">Edit</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card" style="width: 30rem;">
+                <div class="card-body">
+                    <br>
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="form-group row">
+                            <label for="FullTotal" class="col-3 col-form-label">Total :</label>
+                            <div class="col-9">
+                                <input type="text" class="form-control border-success" id="FullTotal"
+                                       placeholder="Total" required disabled>
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="form-group row">
+                            <label for="Discount" class="col-3 col-form-label">Discount :</label>
+                            <div class="col-8">
+                                <input type="text" class="form-control" id="Discount" placeholder="Discount">
+                            </div>
+                            <label for="Discount" class="col-1 col-form-label">%</label>
+                        </div>
+                        <br><br>
+                        <div class="form-group row">
+                            <label for="AmountToPaid" class="col-3 col-form-label">Sub Total :</label>
+                            <div class="col-9">
+                                <input type="text" class="form-control border-success" id="AmountToPaid"
+                                       placeholder="Sub Total" required disabled>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                       value="option1" checked>
+                                <label class="form-check-label" for="inlineRadio1">Cash</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                       value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Card</label>
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="form-group row text-center">
+                            <div class="col-6">
+                                <button type="button" class="btn btn-success">Pay</button>
+                            </div>
+                            <div class="col-6">
+                                <button type="reset" class="btn btn-danger">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--forms end-->
+</div>
+<!--dashboard end-->
+
+<!--footer start-->
+<div class="footer-text btn-primary text-center">Developed by <a href="https://pasanabeysekara.com/" target="_blank"
+                                                                 style="text-decoration: none" class="text-white"><b>Pasan
+    Abeysekara</b></a> @ IJSE
+</div>
+<!--footer end-->
+
+<!--scripts start-->
+<script src="asserts/font/js/all.min.js"></script>
+<script src="asserts/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!--scripts end-->
+
+</body>
+</html>
